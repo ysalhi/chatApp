@@ -9,24 +9,25 @@ body {
     width: 100%;
     display: flex;
     position:relative;
-    background-color: hsl(270, 20%, 96%); 
+    background-color: hsl(270, 20%, 96%);
+    overflow: hidden; 
 }
 
 .mainContainer .leftBackground {
     width: 30%;
-    height: 100%;
+    height: 120%;
     flex-shrink: 0;
     background-image: linear-gradient(to bottom left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    clip-path: ellipse(70% 50%);
+    border-radius: 50% / 25%;
     position:relative;
     left:-60px;
-    top: -15%;
+    top: -35%;
 }
 
 .mainContainer .phone {
     background-color: white;
     width: 16%;
-    height: 57%;
+    height: 60%;
     border-radius: 30px;
     flex-shrink: 0;
     position:absolute;
@@ -113,7 +114,7 @@ body {
     writing-mode: vertical-lr;
     margin-left: auto;
     margin-right: 0.8rem;
-    color: white;
+    color:rgb(244, 244, 244);
     cursor: pointer;
 }
 
@@ -121,18 +122,161 @@ body {
     height: 85%;
     display: flex;
     flex-direction: column;
-    margin: 0.8rem 0.5rem;
+    padding: 0.8rem 0.7rem;
     font-size: 0.6rem;
+    position: relative;
 }
 
 .mainContainer .phone .phoneScreen .chatScreen .chatBubbleLeft {
     color: hsl(276, 55%, 52%);
-    background-color: hsl(0, 0%, 82%);
+    background-color: hsl(0, 2%, 89%);
+    border-radius: 8px;
+    max-width:50%;
+    padding:0.5rem;
+    margin-bottom:0.6rem;
     align-self: flex-start;
 }
 
 .mainContainer .phone .phoneScreen .chatScreen .chatBubbleRight {
     color: hsl(271, 15%, 43%);
     background-color: white;
+    border-radius: 8px;
+    max-width:50%;
+    padding:0.5rem;
+    margin-bottom:0.5rem;
     align-self: flex-end;
 }
+
+.mainContainer .phone .phoneScreen .chatScreen .dogPictures {
+    align-self: flex-end;
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .dogPictures .dogPicture {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .dogPictures .dogPicture img {
+    height: 100%;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .priceTag {
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    height: 40px;
+    width: 73%;
+    border-radius: 13px 13px 13px 4px;
+    margin-bottom: 0.7rem;
+    display:flex;
+    align-items: center;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .priceTag .circleCheck {
+    width:13px;
+    height:13px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 0.8rem;
+    border: 1px solid hsl(289, 100%, 72%);
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .priceTag .walkType {
+    margin-left: 0.8rem;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgb(244, 244, 244);
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .priceTag .price {
+    margin: 0 0.8rem 0 auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .typeBox {
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    color: hsl(0, 0%, 82%);
+    border-radius: 20px;
+    margin: auto 0 1.6rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+} 
+
+.mainContainer .phone .phoneScreen .chatScreen .typeBox .typeText {
+    margin-left: 1.5rem;
+    font-size: 0.65rem;
+}
+
+.mainContainer .phone .phoneScreen .chatScreen .typeBox .submitButton {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    margin: 0 0.5rem 0 auto;
+}
+
+.mainContainer .rightBackground {
+    position: absolute;
+    width: 30%;
+    height: 120%;
+    flex-shrink: 0;
+    background-color: hsl(286, 42%, 94%);
+    border-radius: 50% / 25%;
+    right: -120px;
+    bottom: -35%;
+}
+
+.mainContainer .rightContainer {
+    width: 70%;
+    align-self: center;
+    margin-left: 22%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.mainContainer .rightContainer .title {
+    color: hsl(271, 36%, 24%);
+    font-size: 3rem;
+    font-weight: 500;
+
+}
+
+.mainContainer .rightContainer .description {
+    color: hsl(270, 7%, 64%);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    line-height: 2;
+}
+
+.mainContainer .attribution { 
+    font-size: 11px; text-align: center; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+}
+
+.mainContainer .attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
